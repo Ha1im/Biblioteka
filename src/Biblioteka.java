@@ -129,8 +129,8 @@ public class Biblioteka {
 		input.nextLine();
 		System.out.println("Unesite ime knjige: ");
 		String imeKnjige = input.nextLine();
-
-		new Knjiga(brojKnjige, imeKnjige, false);
+		Boolean jeLiKnjigaPodignuta = false;
+		new Knjiga(brojKnjige, imeKnjige, jeLiKnjigaPodignuta);
 
 		glavniMenu();
 	}
@@ -150,8 +150,8 @@ public class Biblioteka {
 
 		System.out.println("Unesite broj knjige: ");
 		int brojKnjige = unosIntegera();
-
-		Knjiga.podizanjeKnjige(brojRacuna, brojKnjige, new Date());
+		Date datumPodizanjaKnjige = new Date();
+		Knjiga.podizanjeKnjige(brojRacuna, brojKnjige, datumPodizanjaKnjige);
 
 		glavniMenu();
 
@@ -175,8 +175,8 @@ public class Biblioteka {
 
 		System.out.println("Unesite broj knjige: ");
 		brojKnjige = unosIntegera();
-
-		Knjiga.vracanjeKnjige(brojRacuna, brojKnjige, new Date());
+		Date datumVracanjaKnjige = new Date();
+		Knjiga.vracanjeKnjige(brojRacuna, brojKnjige, datumVracanjaKnjige);
 
 		glavniMenu();
 
